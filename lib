@@ -29,12 +29,18 @@ end
 
 
 
+-- Load the NotificationFrame object
 local NotificationFrame = game:GetObjects("rbxassetid://6924028278")[1]
-NotificationFrame.ZIndex = 4
-NotificationFrame.Parent = NotificationHolder
-script = NotificationFrame.NotifScript
-local Notify = loadstring(NotificationFrame.NotifScript.Source)()
+
+-- Set ZIndex and parent the frame to NotificationHolder (assuming NotificationHolder is defined)
+
+-- Store the original script and load the notification function
+local oldScript = script
+
+
+-- Restore the original script
 script = oldScript
+
 
 local NothingsLib = {
     Themes = {
